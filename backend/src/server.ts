@@ -16,7 +16,7 @@ const port = 3131
 connectToDatabase()
 
 app.use(express.json())
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors({ origin: "https://quote-app-pearl-one.vercel.app/" }));
 app.get('/' , (req , res)=>{
     res.send('Home page')
 })
