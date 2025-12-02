@@ -1,6 +1,7 @@
 
 import dotenv from "dotenv"
 dotenv.config()
+import { Request , Response } from "express";
 import express from "express"
 import cors from "cors"; 
 
@@ -17,7 +18,7 @@ connectToDatabase()
 
 app.use(express.json())
 app.use(cors({ origin: "https://quote-app-pearl-one.vercel.app/" }));
-app.get('/' , (req , res)=>{
+app.get('/' , (req : Request, res : Response)=>{
     res.send('Home page')
 })
 

@@ -13,7 +13,7 @@ function Quotes() {
     const handleSubmit = async (e :React.FormEvent<HTMLFormElement>) => {
 e.preventDefault();
 try {
-const response = await fetch("http://localhost:3131/qoute/addqoute", {
+const response = await fetch("https://quote-app-dr9q.onrender.com/qoute/addqoute", {
 method: "POST",
 headers: {
 "Content-Type": "application/json",
@@ -29,7 +29,7 @@ console.error("Error:", error);
 
  const fetchData = async () => {
   try {
-    const response = await axios.get("http://localhost:3131/qoute/getquotes");
+    const response = await axios.get("https://quote-app-dr9q.onrender.com/qoute/getquotes");
     setData(response.data.data.qoutelist)
     
 ;
